@@ -1,5 +1,7 @@
 <div align="center">
-  
+
+![Cover](https://pbs.twimg.com/media/G_Ebt2_WAAAV9DB?format=jpg&name=large)
+
 # Hey there, I'm Ian 👋
 
 ### Full Stack Developer
