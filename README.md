@@ -14,27 +14,27 @@
 
 ---
 
-## 🚀 About Me
+## About Me
 
 Full Stack Developer from Argentina passionate about building exceptional products and refining user experiences. I focus on making complex processes simple and maintainable.
 
 **What I do:**
 
-- 🎨 Craft scalable frontend architectures with Next.js, React & TypeScript
-- 🔧 Build robust backends with Python and PHP
-- 🤖 Develop AI-powered solutions using LangChain, LangGraph, and RAG systems
-- 📚 Champion best practices through documentation and knowledge sharing
+- Craft scalable frontend architectures with Next.js, React & TypeScript
+- Build robust backends with Python and PHP
+- Develop AI-powered solutions using LangChain, LangGraph, and RAG systems
+- Champion best practices through documentation and knowledge sharing
 
 **Currently:**
 
-- 🎓 Computer Engineering student at UNL
-- 💼 2+ years building production-grade applications
-- 🔍 Exploring opportunities in **Fintech** and **AI-powered solutions**
-- 🌱 Deep diving into advanced RAG techniques and LLM integrations
+- Computer Engineering student at UNL
+- 2+ years building production-grade applications
+- Exploring opportunities in **Fintech** and **AI-powered solutions**
+- Deep diving into advanced RAG techniques and LLM integrations
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -89,7 +89,7 @@ Full Stack Developer from Argentina passionate about building exceptional produc
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div>
   
@@ -99,7 +99,7 @@ Full Stack Developer from Argentina passionate about building exceptional produc
 
 ---
 
-## 🔨 Currently Building
+## Currently Building
 
 ### YT Learning Platform _(In Progress)_
 
@@ -109,9 +109,9 @@ An **AI-powered educational platform** that transforms YouTube playlists into in
 
 **Key Features:**
 
-- 🎯 Hybrid search combining BM25 + vector similarity for accurate retrieval
-- 📍 Automatic citation with direct links to specific video moments
-- 🔄 LangGraph state machine orchestrating complex RAG workflows
+- Hybrid search combining BM25 + vector similarity for accurate retrieval
+- Automatic citation with direct links to specific video moments
+- LangGraph state machine orchestrating complex RAG workflows
 
 **Tech Stack:**
 
@@ -130,10 +130,10 @@ An **AI-powered educational platform** that transforms YouTube playlists into in
 
 ---
 
-## 🎯 Current Focus
+## Current Focus
 
-- 🤖 Building production-ready RAG systems with LangChain and LangGraph
-- 💰 Exploring **Fintech** projects and financial technology innovations
-- 📚 Mastering vector databases and advanced embedding strategies
-- 🏗️ Applying architectural patterns for scalable, maintainable applications
-- 💡 Contributing to open-source and sharing knowledge with the dev community
+- Building RAG systems with LangChain and LangGraph
+- Exploring **Fintech** projects and financial technology innovations
+- Mastering vector databases and advanced embedding strategies
+- Applying architectural patterns for scalable, maintainable applications
+- Contributing to open-source and sharing knowledge with the dev community
