@@ -109,9 +109,12 @@ An **AI-powered educational platform** that transforms YouTube playlists into in
 
 **Key Features:**
 
-- Hybrid search combining BM25 + vector similarity for accurate retrieval
-- Automatic citation with direct links to specific video moments
-- LangGraph state machine orchestrating complex RAG workflows
+- **Hybrid Search**: Ensemble Retriever combining BM25 (40% lexical) + vector similarity (60% semantic) for accurate retrieval
+- **Automatic Citation**: Direct links to specific video moments with precise timestamps
+- **LangGraph State Machine**: Orchestrated RAG pipeline with checkpointing and streaming responses
+- **Conversation Memory**: SQLite-based chat persistence with automatic history summarization for long conversations
+- **Multi-Query Retrieval**: Query reformulation for improved document matching
+- **Async Transcript Loading**: Concurrent extraction with rate limiting and proxy support
 
 **Tech Stack:**
 
@@ -120,13 +123,15 @@ An **AI-powered educational platform** that transforms YouTube playlists into in
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 ![Chroma](https://img.shields.io/badge/Chroma-8B5CF6?style=flat-square&logo=chromadb&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=flat-square&logo=anthropic&logoColor=white)
+![VoyageAI](https://img.shields.io/badge/VoyageAI-000000?style=flat-square&logo=ai&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
 **Architecture Highlights:**
 
-- Domain-Driven Design (DDD) structure
-- Ensemble Retriever (40% lexical + 60% semantic)
-- Async transcript extraction
-- Pydantic models for robust validation
+- **Domain-Driven Design (DDD)**: Clean separation between domain, application, and infrastructure layers
+- **Ensemble Retriever**: Hybrid search with configurable BM25/semantic weights
+- **LangGraph Checkpointing**: Graph state persistence and resumable sessions
+- **Smart Chunking**: Intelligent transcript segmentation with overlap for context preservation
 
 ---
 
