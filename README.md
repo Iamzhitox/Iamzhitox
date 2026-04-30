@@ -105,16 +105,17 @@ Full Stack Developer from Argentina passionate about building exceptional produc
 
 [![View Repository](https://img.shields.io/badge/View_Repository-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Iamzhitox/yt-learning-assistant)
 
-An **AI-powered educational platform** that transforms YouTube playlists into interactive learning experiences. Ask questions about any playlist and get precise answers with exact video timestamps.
+An **AI-powered educational platform** that transforms YouTube playlists into interactive learning experiences. Built on a **multi-agent architecture** that coordinates research, content generation, and user interaction to deliver precise answers, quizzes, and exams from any playlist.
 
 **Key Features:**
 
-- **Hybrid Search**: Ensemble Retriever combining BM25 (40% lexical) + vector similarity (60% semantic) for accurate retrieval
-- **Automatic Citation**: Direct links to specific video moments with precise timestamps
-- **LangGraph State Machine**: Orchestrated RAG pipeline with checkpointing and streaming responses
-- **Conversation Memory**: SQLite-based chat persistence with automatic history summarization for long conversations
-- **Multi-Query Retrieval**: Query reformulation for improved document matching
-- **Async Transcript Loading**: Concurrent extraction with rate limiting and proxy support
+- **Multi-Agent Orchestration**: Three specialized agents (Supervisor, Analyst, Teacher) coordinated by a LangGraph state machine, with chained delegation across a single user request
+- **Hybrid Search**: Ensemble Retriever combining BM25 (lexical) + vector similarity (semantic) wrapped in a MultiQueryRetriever for query reformulation
+- **Quiz & Exam Generation**: The Teacher agent produces multiple-choice quizzes (JSON) and formatted PDF exams rendered with WeasyPrint
+- **Web Search Fallback**: Tavily integration for real-time external lookups when content falls outside the indexed playlist
+- **Automatic Citation**: Direct links to specific video moments with precise timestamps via 30-second chunking strategy
+- **Conversation Memory**: SQLite-based persistence with rolling summarization, last 6 messages kept verbatim while older context is compressed
+- **Async Transcript Loading**: Concurrent extraction with rate limiting and optional Webshare proxy support
 
 **Tech Stack:**
 
@@ -124,14 +125,18 @@ An **AI-powered educational platform** that transforms YouTube playlists into in
 ![Chroma](https://img.shields.io/badge/Chroma-8B5CF6?style=flat-square&logo=chromadb&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![VoyageAI](https://img.shields.io/badge/VoyageAI-000000?style=flat-square&logo=ai&logoColor=white)
+![Tavily](https://img.shields.io/badge/Tavily-0066FF?style=flat-square&logo=ai&logoColor=white)
+![WeasyPrint](https://img.shields.io/badge/WeasyPrint-FF6B35?style=flat-square&logo=python&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
 **Architecture Highlights:**
 
-- **Domain-Driven Design (DDD)**: Clean separation between domain, application, and infrastructure layers
-- **Ensemble Retriever**: Hybrid search with configurable BM25/semantic weights
-- **LangGraph Checkpointing**: Graph state persistence and resumable sessions
-- **Smart Chunking**: Intelligent transcript segmentation with overlap for context preservation
+- **Supervisor / Analyst / Teacher Pattern**: Specialized agents with focused system prompts and tool access, reducing per-request token cost and clarifying responsibilities
+- **Tiered Model Strategy**: Capable model reserved for the user-facing Supervisor; lighter model handles retrieval and content generation in specialist agents
+- **ReAct Agents**: Analyst and Teacher run tool-calling loops with dedicated toolkits (semantic search, transcript reconstruction, summarization, quiz/exam generation)
+- **DDD Layering**: Clean separation between domain, application, and infrastructure layers
+- **LangGraph Checkpointing**: Graph state persisted via AsyncSqliteSaver for resumable sessions
+- **Smart Chunking**: 30-second transcript segments with overlap, optimized for citation precision over content density
 
 ---
 
